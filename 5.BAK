@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include<conio.h>
+#include<malloc.h>
+struct node
+{int info;
+struct node* prev;
+struct node* next;
+}
+*head=NULL;
+
+void add(int item)
+{
+struct node* p;
+p=(struct node*)malloc(sizeof(struct node));
+if(head==NULL)
+{
+p->info=item;
+p->prev=NULL;
+p->next=NULL;
+head=p;
+return;
+}
+head->prev=p;
+p->info=item;
+p->prev=NULL;
+p->next=head;
+head=p;
+}
+
+void Delete()
+{
+struct node* p=head;
+struct node* pre=head;
+while(p->next!=NULL)
+{
+pre=p;
+p=p->next;
+}
+pre->next=NULL;
+free(p);
+}
+
+void display()
+{
+struct node* p=head;
+while(p->next!=NULL)
+{
+printf("%d,",p->info);
+p=p->next;
+}
+printf("%d,END\n",p->info);
+}
+
+void main()
+{
+int i;
+clrscr();
+for(i=1;i<=5;i++)
+{
+add(i);
+}
+display();
+add(6);
+display();
+Delete();
+display;
+getch();
+}

@@ -1,0 +1,17 @@
+#include<iostream.h>
+#include<conio.h>
+void get();
+void main()
+{
+clrscr();
+get();
+getch();
+}
+void get()
+{
+cout<<"sorry"<<endl;
+int a,b;
+a=5;
+b=7;
+cout<<"sum"<<a+b;
+}

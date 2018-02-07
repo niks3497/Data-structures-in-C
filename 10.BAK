@@ -1,0 +1,12 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+int fno,secno,result;
+clrscr();
+fno=5;
+secno=6;
+result=fno+secno;
+cout<<result;
+getch();
+}

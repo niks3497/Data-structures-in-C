@@ -1,0 +1,69 @@
+#include<stdio.h>
+#include<conio.h>
+void ext(char *s)
+{
+char a[20],*p;
+int num,i=0;
+p=a;
+printf("ENTER THE NUMBER OF CHARCATERS TO BE EXTRACTED\n");
+scanf("%d",&num);
+while(i<num)
+{
+*p=*s;
+p++;
+s++;
+i++;
+}
+a[i]='\0';
+puts(a);
+}
+void upcase(char q[20])
+{
+int i,j;
+for(i=0;q[i]!='\0';i++)
+{
+if(97<=q[i]<=122)
+{
+q[i]=q[i]-32;
+}}
+printf("IN UPPERCASE \n");
+for(j=0;q[j]!='\0';j++)
+{printf("%c",q[j]);}
+printf("\n");
+}
+void main()
+{
+char q[20];
+clrscr();
+printf("ENTER THE STRING\n");
+gets(q);
+ext(q);
+upcase(q);
+getch();
+}
+/*
+ENTER THE STRING
+nikhil
+ENTER THE NUMBER OF CHARCATERS TO BE EXTRACTED
+3
+nik
+IN UPPERCASE
+NIKHIL
+*/
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+

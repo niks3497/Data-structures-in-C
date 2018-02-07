@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10],i,pos,item;
+clrscr();
+printf("ENTER THE ELEMENTS\n");
+for(i=0;i<=4;i++)
+scanf("%d",&a[i]);
+printf("ENTER THE ELEMENT TO BE INSERTED\n");
+scanf("%d",&item);
+printf("ENTER THE POSITION\n");
+scanf("%d",&pos);
+for(i=5;i>=pos;i--)
+{
+a[i]=a[i-1];
+}
+a[pos-1]=item;
+for(i=0;i<=5;i++)
+{printf("%d ",a[i]);
+}
+getch();
+}
+/*
+ENTER THE ELEMENTS
+2
+4
+7
+9
+3
+ENTER THE ELEMENT TO BE INSERTED
+10
+ENTER THE POSITION
+2
+2 10 4 7 9 3
+*/
+
+
+
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
